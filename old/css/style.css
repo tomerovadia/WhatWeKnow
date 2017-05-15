@@ -1,0 +1,148 @@
+/***** SET-IT-AND-FORGET-IT STUFF 
+************************************/
+
+/* Clearfix hack */
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+/* Border-box hack */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/***** STYLES 
+************************************/
+
+.question_box {
+	height: 110px;
+	background-color: darkred;
+	margin: 10px;
+	border: 3px solid black;
+}
+
+.subscribe_toggle {
+	height: 50px;
+	background-color: lightgreen;
+	float: left;
+	border: 1px solid black;
+	margin: 25px 5px;
+	width: 5%;
+}
+
+.rank_vote {
+	float: left;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	margin-left: 1%;
+}
+
+.question_text {
+	color: white;
+	font-size: 1rem;
+	float: left;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	margin-left: 1%;
+}
+
+.arrow-up-container {
+
+}
+
+.arrow-down-container {
+}
+
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid black;
+	margin-left: 10px;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 15px solid black;
+	margin-left: 10px;
+}
+
+
+/***** ON/OFF SWITCH 
+************************************/
+
+
+.onoffswitch {
+    width: 41px;
+    -webkit-user-select:none; 
+    -moz-user-select:none; 
+    -ms-user-select: none;
+    float: left;
+    position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	margin-left: 1%;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; 
+    overflow: hidden; 
+    cursor: pointer;
+    height: 23px; 
+    padding: 0; 
+    line-height: 23px;
+    border: 2px 
+    solid #CCCCCC; 
+    border-radius: 23px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+.onoffswitch-label:before {
+    content: "";
+    display: block; 
+    width: 23px; 
+    margin: 0px;
+    background: #FFFFFF;
+    position: absolute; 
+    top: 0; 
+    bottom: 0;
+    right: 16px;
+    border: 2px solid #CCCCCC; 
+    border-radius: 23px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #49E845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+   border-color: #49E845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 0px; 
+}
+
+
+

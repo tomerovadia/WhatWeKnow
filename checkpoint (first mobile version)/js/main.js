@@ -1,0 +1,9 @@
+$("#question").click(
+	function(e){
+		if($("#answerspanel").css("display")=="block"){
+			$("#answerspanel").slideUp()
+		}else{
+			$("#answerspanel").slideDown()
+		}
+	}
+)

@@ -1,0 +1,143 @@
+/* SET IT AND LEAVE IT HACKS */
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Creates the question region  */
+.question-box {
+	background-color: darkred;
+	margin: 1%;
+	border: 3px solid black;
+	position: relative;
+	height: 100%; /* Makes height adjust if text is too long  */
+}
+
+/* This hack allows vertical alignment of inline-block elements http://codepen.io/edge0703/pen/iHJuA  */
+.allow-vertical-alignment:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+/* Created using a div with 0x0 dimension and only one border (think picture frame) */
+.up-arrow {
+	width: 0;
+	height: 0;
+	border-bottom: 25px solid black;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	margin-bottom: 15px;
+}
+
+/* Created using a div with 0x0 dimension and only one border (think picture frame) */
+.down-arrow {
+	width: 0;
+	height: 0;
+	border-top: 25px solid black;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	margin-top: 15px;
+}
+
+/* Holds and positions the arrows */
+.arrows {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 10px 0px 10px 1%; /* Create space to the left, and to the top and bottom in case the questio isn't very long */
+}
+
+.arrows-collapsed {
+	display: inline-block;
+	margin: 20px 0px 10px 1%;
+}
+
+.onoff-arrows {
+	display: inline-block;
+	margin: 20px 0px 5px 15px;
+	width: 8%;
+}
+
+.question-text {
+	display: inline-block;
+	vertical-align: middle;
+	color: white;
+	margin-left: 1%;
+	line-height: normal;
+	font-size: 1.3rem;
+	width: 85%;
+	padding: 10px 0;
+}
+
+.question-text-collapsed {
+	display: inline-block;
+	color: white;
+	margin-left: 1%;
+	line-height: normal;
+	font-size: 1.3rem;
+	width: 85%;
+	padding: 10px 0;
+	vertical-align: top;
+}
+
+.question-answers {
+	vertical-align: top;
+	height: 100%;
+	display: inline-block;
+}
+
+
+
+
+/* ON/OFF SWITCH from https://proto.io/freebies/onoff/ */
+
+.onoffswitch {
+    position: relative; 
+    width: 60px;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    margin-left: 1%;
+    display: inline-block; /* Added for alignment */
+    vertical-align: middle; /* Added for alignment */
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    height: 36px; padding: 0; line-height: 36px;
+    border: 2px solid #CCCCCC; border-radius: 36px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+
+.onoffswitch-label:before {
+    content: "";
+    display: block; width: 36px; margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 22px;
+    border: 2px solid #CCCCCC; border-radius: 36px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #49E845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+   border-color: #49E845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 0px; 
+}

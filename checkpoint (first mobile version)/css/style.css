@@ -1,0 +1,231 @@
+/* SET IT AND LEAVE IT HACKS */
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* DIVS */
+
+.question-box {
+	background-color: lightyellow;
+	margin: 10px;
+	border: 2px solid black;
+}
+
+.toggle-arrows {
+	background-color: lightblue;
+	width: 7%;
+	height: 100%;
+	border: 2px solid black;
+	float: left;
+}
+
+.question-arrows {
+  	width: 100%;
+	margin: 10px auto; /* Create space to the left, and to the top and bottom in case the questio isn't very long */
+}
+
+/* Created using a div with 0x0 dimension and only one border (think picture frame) */
+.question-arrows .up-arrow {
+	width: 0;
+	height: 0;
+	border-bottom: 25px solid black;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	margin: 15px auto;
+}
+
+.question-arrows .question-rank-count {
+	text-align: center;
+}
+
+/* Created using a div with 0x0 dimension and only one border (think picture frame) */
+.question-arrows .down-arrow {
+	width: 0;
+	height: 0;
+	border-top: 25px solid black;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	margin: 15px auto;
+}
+
+.question-answers {
+	background-color: lightgreen;
+	width: 100%;
+	height: 100%;
+	border: 2px solid black;
+	float: left;
+}
+
+.question {
+	border: 2px solid black;
+	width: 100%;
+	background-color: blue;
+	color: white;
+	padding: 10px 10px 10px 10px;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.answers-panel {
+	border: 2px solid black;
+	width: 100%;
+	background-color: brown;
+	height: 100%;
+}
+
+.answers {
+	border: 2px solid black;
+	width: 100%;
+	background-color: lightgrey;
+}
+
+.answer {
+	border: 2px solid black;
+	background-color: darkgray;
+	margin: 10px;
+}
+
+.answer-arrows {
+	width: 100%;
+	background-color: lightblue;
+	border: 2px solid black;
+}
+
+.answer-arrows .up-arrow {
+	width: 0;
+	height: 0;
+	border-bottom: 20px solid black;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	margin: 10px 10px;
+}
+
+.answer-rank-count {
+	text-align: center;
+	position: relative;
+	top: 13px;
+	margin: 0 20px;
+}
+
+/* Created using a div with 0x0 dimension and only one border (think picture frame) */
+.answer-arrows .down-arrow {
+	width: 0;
+	height: 0;
+	border-top: 20px solid black;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	margin: 10px 10px;
+}
+
+.answer-text {
+	background-color: teal;
+	border: 2px solid black;
+	width: 100%;
+	color: white;
+	padding: 10px;
+}
+
+.controls {
+	background-color: gray;
+	border: 2px solid black;
+}
+
+.controls .question-rank-count {
+	text-align: center;
+	position: relative;
+	top: 20px;
+	margin: 0 20px;
+}
+
+.floatright {
+	float: right;
+}
+
+.controls .up-arrow {
+	width: 0;
+	height: 0;
+	border-bottom: 25px solid black;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	margin: 15px 10px;
+}
+
+.controls .down-arrow {
+	width: 0;
+	height: 0;
+	border-top: 25px solid black;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	margin: 15px 10px;
+}
+
+
+
+
+/* ON/OFF TOGGLE */
+
+.controls .onoffswitch {
+    position: relative; 
+    width: 60px;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+  	top: 10px;
+  	margin: 0 15px 0 0;
+}
+
+.onoffswitch {
+    position: relative; 
+    width: 60px;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    display: block; /* Added for alignment */
+    vertical-align: middle; /* Added for alignment */
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    height: 36px; padding: 0; line-height: 36px;
+    border: 2px solid #CCCCCC; border-radius: 36px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+
+.onoffswitch-label:before {
+    content: "";
+    display: block; width: 36px; margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 22px;
+    border: 2px solid #CCCCCC; border-radius: 36px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #49E845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+   border-color: #49E845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 0px; 
+}
+
+
+
+
+

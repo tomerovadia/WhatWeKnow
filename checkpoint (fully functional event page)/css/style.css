@@ -1,0 +1,530 @@
+/* SET IT AND LEAVE IT HACKS */
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	background-color: lightblue;
+}
+
+/* HEADER */
+
+header {
+	width: 100%;
+}
+
+.title-div {
+	border: 1px solid black;
+	background-color: #000080;
+}
+
+.event-div {
+	border: 1px solid black;
+	background-color: #4682B4;
+}
+
+h1, h2, h3, p {
+	color: white;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2rem;
+	margin: 10px 0;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin: 8px 0;
+}
+
+h3 {
+	font-size: 1.2rem;
+	margin: 7px 0;
+}
+
+p {
+	font-size: 1rem;
+	margin: 8px 8px;
+	font-weight: normal;
+}
+
+
+/* DIVS */
+
+.question-box {
+	background-color: white;
+	margin: 10px;
+	border: 2px solid black;
+}
+
+.desktop-question-controls {
+	display: none;
+}
+
+@media (min-width: 500px){
+	.desktop-question-controls {
+		background-color: lightgrey;
+		width: 165px;
+		border-right: 2px solid black;
+		float: left;
+		display: block;
+	}
+}
+
+@media (min-width: 500px){
+	.desktop-question-arrows {
+	margin: 0 8px; /* Create space to the left, and to the top and bottom in case the questio isn't very long */
+	float: right;
+	}
+
+	.desktop-question-arrows .up-arrow {
+		width: 0;
+		height: 0;
+	    border-bottom: 15px solid black;
+	    border-left: 15px solid transparent;
+	    border-right: 15px solid transparent;
+	    margin: 10px auto;
+	    cursor: pointer;
+    }
+
+    .desktop-question-arrows .question-rank-count {
+	text-align: center;
+	}
+
+    .desktop-question-arrows .down-arrow {
+    	width: 0;
+		height: 0;
+	    border-top: 15px solid black;
+	    border-left: 15px solid transparent;
+	    border-right: 15px solid transparent;
+	    margin: 10px auto;
+	    cursor: pointer;
+    }
+}
+
+.question-answers {
+	background-color: lightyellow;
+	width: 100%;
+	height: 100%;
+}
+
+@media (min-width: 500px){
+	.question-answers {
+		width: auto;
+		overflow: hidden; /*Take remaining space*/
+	}
+}
+
+.question {
+	background-color: white;
+    color: black;
+	padding: 10px 10px 10px 10px;
+	font-size: 1.2rem;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1; /* If this question is fixed at the top, keep it above everything */
+}
+
+@media (min-width: 500px){
+	.question {
+		font-size: 1.3rem;
+		padding: 20px 10px;
+	}
+}
+
+.answers-panel {
+	border: 2px solid black;
+	width: 100%;
+	background-color: brown;
+	height: 100%;
+	display: none;
+	overflow: visible;
+}
+
+.answers {
+	border: 1px solid black;
+	width: 100%;
+	background-color: lightyellow;
+}
+
+@media (min-width: 500px){
+	.answers {
+		max-height: 350px;
+		overflow: scroll;
+	}
+}
+
+.answer {
+	border: 2px solid black;
+	background-color: white;
+	margin: 10px;
+}
+
+.answer-controls {
+	width: 100%;
+	background-color: lightgrey;
+	border-top: 2px solid black;
+}
+
+@media (min-width: 500px){
+	.answer-controls {
+		display: none;
+	}
+}
+
+.left-answer-control {
+	width: 33.333%;
+	float: left;
+	background-color: lightgrey;
+	border-right: 1px solid black;
+}
+
+.center-answer-control {
+	width: 33.3333%;
+	float: left;
+	background-color: lightgrey;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.right-answer-control {
+	width: 33.333%;
+	float: right;
+	background-color: lightgrey;
+	border-left: 1px solid black;
+}
+
+.desktop-answer-controls {
+	display: none;
+}
+
+
+@media (min-width: 500px){
+	.desktop-answer-controls {
+		width: 50px;
+		background-color: lightgrey;
+		border-right: 2px solid black;
+		float: left;
+		display: block;
+	}
+
+	.desktop-answer-controls .up-arrow {
+		width: 0;
+		height: 0;
+		border-bottom: 20px solid black;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		margin: 10px auto;
+		cursor: pointer;
+	}
+
+	/* Created using a div with 0x0 dimension and only one border (think picture frame) */
+	.desktop-answer-controls .down-arrow {
+		width: 0;
+		height: 0;
+		border-top: 20px solid black;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		margin: 10px auto;
+		cursor: pointer;
+	}
+}
+
+.answer-controls .up-arrow {
+	width: 0;
+	height: 0;
+	border-bottom: 15px solid black;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	margin: 5px auto;
+	cursor: pointer;
+}
+
+.answer-rank-count {
+	font-size: 1rem;
+	text-align: center;
+	margin: 4px auto;
+}
+
+@media (min-width: 500px){
+	.answer-rank-count {
+		font-size: 1rem;
+		margin: 0;
+	}
+}
+
+/* Created using a div with 0x0 dimension and only one border (think picture frame) */
+.answer-controls .down-arrow {
+	width: 0;
+	height: 0;
+	border-top: 15px solid black;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	margin: 5px auto;
+	cursor: pointer;
+}
+
+.answer-text {
+	background-color: white;
+	width: 100%;
+	color: black;
+	padding: 10px;
+	font-size: 1.1rem;
+}
+
+@media (min-width: 500px){
+	.answer-text {
+		width: auto; /* Take rest of the width */
+		overflow: hidden; /* Take rest of the width */
+		font-size: 1rem;
+	}
+}
+
+.question-controls {
+	background-color: lightgray;
+}
+
+@media (min-width: 500px){
+	.question-controls {
+		display: none;
+	}
+}
+
+.left-question-control {
+	width: 22%;
+	float: left;
+	background-color: lightgray;
+	border: 1px solid black;
+	border-left: none;
+	border-bottom: none;
+	height: 35px;
+}
+
+.centerleft-question-control {
+	width: 29%;
+	float: left;
+	background-color: lightgray;
+	border: 1px solid black;
+	border-bottom: none;
+	height: 35px;
+}
+
+.centerright-question-control {
+	width: 22%;
+	float: right;
+	background-color: lightgray;
+	border: 1px solid black;
+	border-bottom: none;
+	height: 35px;
+}
+
+.right-question-control {
+	width: 27%;
+	float: right;
+	background-color: lightgray;
+	border: 1px solid black;
+	border-right: none;
+	border-bottom: none;
+	height: 35px;
+}
+
+
+
+
+.question-controls .question-rank-count {
+	text-align: center;
+	position: relative;
+	margin-top: 9px;
+	font-size: 1rem;
+	position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.floatright {
+	float: right;
+}
+
+.floatleft {
+	float: left;
+}
+
+.question-controls .up-arrow {
+	width: 0;
+	height: 0;
+	border-bottom: 20px solid black;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	margin: 6px auto;
+	position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-80%);
+    transform: translateY(-80%);
+    cursor: pointer;
+}
+
+.question-controls .down-arrow {
+	width: 0;
+	height: 0;
+	border-top: 20px solid black;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	margin: 6px auto;
+	position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-80%);
+    transform: translateY(-80%);
+    cursor: pointer;
+}
+
+.submit-answer-div {
+	height: 100px;
+	border: 2px solid black;
+	background-color: white;
+	margin: 10px;
+	margin: 10px;
+}
+
+.submit-answer-textbox {
+	width: 100%;
+	height: 73px;
+	padding: 7px;
+	font-family: Georgia;
+}
+
+.submit-answer-button {
+    height: 23px;
+    background-color: yellow;
+    display: block;
+    width: 100%;
+    font-family: Georgia;
+    font-size: 0.9rem;
+    border: none;
+    border-top: 1px solid black;
+}
+
+.submit-question-div {
+	height: 100px;
+	background-color: white;
+	margin: 10px;
+	border: 2px solid black;
+}
+
+.submit-question-textbox {
+	width: 100%;
+	height: 71px;
+	padding: 7px;
+	font-family: Georgia;
+	font-size: 1.2rem;
+}
+
+.submit-question-button {
+    height: 25px;
+    background-color: yellow;
+    display: block;
+    width: 100%;
+    font-family: Georgia;
+    font-size: 1.2rem;
+    border: none;
+    border-top: 1px solid black;
+}
+
+
+
+
+
+
+/* ON/OFF TOGGLE */
+/*
+.question-controls .onoffswitch {
+    position: relative; 
+    width: 80px;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+}
+
+
+.onoffswitch {
+    position: relative; 
+    width: 70px;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    float: left;
+    display: block; /* Added for alignment 
+    margin: 8px 8px;
+    vertical-align: middle; /* Added for alignment 
+}*/
+
+
+.onoffswitch-div {
+	position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: 25px;
+}
+
+@media (min-width: 500px){
+	.onoffswitch-div {
+		float: left;
+		position: static;
+   		top: 0;
+   		transform: none;
+   		margin-top: 30px;
+   		margin-left: 20px;
+	}
+}
+
+.onoffswitch {
+    position: relative; 
+    width: 45px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    height: 24px; padding: 0; line-height: 24px;
+    border: 2px solid #CCCCCC; border-radius: 24px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+.onoffswitch-label:before {
+    content: "";
+    display: block; width: 24px; margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 19px;
+    border: 2px solid #CCCCCC; border-radius: 24px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #49E845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+   border-color: #49E845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 0px; 
+}
+
+
+
+
+
